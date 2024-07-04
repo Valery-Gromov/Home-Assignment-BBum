@@ -73,6 +73,7 @@ const App: React.FC = () => {
           <p>Feels like: {weather.current.feels_like}</p>
           <p>UV Index: {weather.current.uvi}</p>
           <p>Wind speed: {weather.current.wind_speed}</p>
+          <p>Thanks for your attantion</p>
         </div>
       )}
       {savedCities.length > 0 && (
