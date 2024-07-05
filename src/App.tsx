@@ -12,7 +12,7 @@ const App: React.FC = () => {
   const getCoordinates = async (city: string) => {
     try {
       const response = await axios.get(
-        `http://api.openweathermap.org/geo/1.0/direct?q=${city}&appid=${API_KEY}`,
+        `https://api.openweathermap.org/geo/1.0/direct?q=${city}&appid=${API_KEY}`,
       );
       const { lat, lon } = response.data[0];
       // setCoordinates({ lat, lon });
