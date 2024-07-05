@@ -6,10 +6,6 @@ const API_KEY = '478e166b12daa48216146c31c4f7c9fe';
 
 const App: React.FC = () => {
   const [city, setCity] = React.useState<string>('');
-  const [coordinates, setCoordinates] = React.useState({
-    lat: '',
-    lon: '',
-  });
   const [weather, setWeather] = React.useState<any>(null);
   const [savedCities, setSavedCities] = React.useState<string[]>([]);
 
