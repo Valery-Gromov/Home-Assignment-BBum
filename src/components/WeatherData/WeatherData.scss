@@ -1,0 +1,81 @@
+@import '../../styles/typography.scss';
+
+.weather-data {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: 20px;
+  opacity: 0.8;
+  background: rgba(0, 141, 218, 0.5);
+  backdrop-filter: blur(10px);
+  padding: 20px;
+
+  &_1x1 {
+    grid-column: span 1;
+    grid-row: span 1;
+  }
+
+  &_1x4 {
+    grid-column: span 4;
+    grid-row: span 1;
+  }
+
+  &_1x2 {
+    grid-column: span 2;
+    grid-row: span 1;
+  }
+
+  &_2x2 {
+    grid-column: span 2;
+    grid-row: span 2;
+  }
+
+  &__top-container {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &::after {
+      content: '';
+      position: absolute;
+      width: calc(100% + 40px);
+      height: 1px;
+      background-color: rgba(255, 255, 255, 0.5);
+      left: -20px;
+      bottom: -12px;
+    }
+  }
+
+  &__range-container {
+    display: flex;
+    justify-content: space-between;
+    width: 85px;
+
+    h3 {
+      color: rgba(255, 255, 255, 0.6);
+
+      text-align: center;
+      /* Main/Broken clouds */
+      text-shadow: 0px 4px 80px rgba(0, 0, 0, 0.8);
+      /* H5 */
+      font-family: Inter;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: normal;
+      text-transform: uppercase;
+    }
+  }
+
+  &__title {
+    @include Web-Title;
+    color: rgba(255, 255, 255, 0.8);
+    text-shadow: 0px 4px 80px #1280bc;
+    text-align: left;
+  }
+
+  &__bottom-container {
+    height: calc(100% - 48px);
+  }
+}

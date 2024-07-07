@@ -1,0 +1,36 @@
+import { useEffect, useRef } from 'react';
+import './SavedCities.scss';
+import { useSelector } from 'react-redux';
+import { location } from '../../redux/weatherItem/types';
+import { RootState } from '../../redux/store';
+import SavedCityItem from '../SavedCityItem/SavedCityItem';
+
+const SavedCities = () => {
+  const isMounted = useRef(false);
+  const { citiesList } = useSelector((state: RootState) => state.savedCitiesList);
+
+  useEffect(() => {
+    if (isMounted.current) {
+      const json = JSON.stringify(citiesList);
+      console.log('json', json);
+      localStorage.setItem('savedCitiesList', json);
+    }
+
+    isMounted.current = true;
+  }, [citiesList]);
+
+  return (
+    <section className="saved-cities">
+      <ul className="saved-cities__list">
+        {citiesList.map((obj: location, index: number) => (
+          <li className="saved-cities__list-item" key={index}>
+            {' '}
+            <SavedCityItem {...obj} />
+          </li>
+        ))}
+      </ul>
+    </section>
+  );
+};
+
+export default SavedCities;
