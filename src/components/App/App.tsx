@@ -40,7 +40,6 @@ const App: React.FC = () => {
 
   useEffect(() => {
     let currentCity;
-    
     if (location) {
       currentCity = citiesList.find((item) => item.name === location.name);
     }
@@ -73,7 +72,7 @@ const App: React.FC = () => {
 
         updateCitiesListas();
       }
-    }, 10 * 10 * 1000);
+    }, 3600000);
 
     return () => clearInterval(intervalId);
   }, [dispatch, location, weather, citiesList]);
