@@ -1,46 +1,56 @@
-# Getting Started with Create React App
+# Home Assignment Weather Forecast
+Our weather application, built with React, TypeScript, and Redux, provides users with real-time weather information and forecasts for various cities. The application fetches data from a weather API and displays the current weather conditions, including temperature, humidity, wind speed, and weather descriptions
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Repository address: https://github.com/Valery-Gromov/Home-Assignment-BBum
 
-## Available Scripts
+# Key Features:
+1. Current Weather and Forecasts: View detailed weather information for the current day and the upcoming days.
+2. Save Favorite Cities: Users can save their favorite cities for quick access to their weather updates.
+3. Dynamic Backgrounds and Icons: The application dynamically updates the background and icons based on the current weather conditions, providing an engaging user experience.
+4. Responsive Design: The application is fully responsive and works seamlessly across different devices and screen sizes.
+5. Automatic Updates: Weather data is automatically updated every 10 minutes to ensure users always have the latest information.
+This project aims to provide an intuitive and visually appealing way for users to stay informed about the weather in their selected locations
 
-In the project directory, you can run:
+# Technologies used:
+- ReactJS
+- TypeScript
+- Redux Toolkit (data management)
+- Axios + Fetch (sending requests to backend)
+- React Hooks
+- Prettier (code formatting)
+- SCSS (styling)
 
-### `npm start`
+# Link to the demo:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+https://weather-forecast-beach-bum.netlify.app/
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+# Instructions for running the project locally:
 
-### `npm test`
+**Step 1: Clone the Repository**
+- Open the terminal (command line) on your computer.
+- Navigate to the directory where you want to save the project.
+- Use the `git clone` command to clone the repository:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```bash
+git clone git@github.com:Valery-Gromov/chatty-ai.git
+```
 
-### `npm run build`
+**Step 2: Install Dependencies**
+- Navigate to the project directory:
+```bash
+cd repository-name
+```
+- Ensure that you have a package manager installed (such as npm or yarn).
+- Install the necessary dependencies:
+```bash
+npm install
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+**Step 3: Run the Application**
+- Start the frontend with the command:
+```bash
+npm run start
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- Open your web browser and go to http://localhost:3000 (or another port specified in the project configuration).
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
