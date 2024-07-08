@@ -4,21 +4,22 @@
   align-items: center;
   width: 100%;
   align-self: stretch;
-  min-height: 111px;
+  max-height: 130px;
   border-radius: 20px;
   background: rgba(2, 83, 127, 0.5);
-  padding: 24px 20px;
+  padding: 20px;
   cursor: pointer;
 
   &__container {
     display: flex;
     flex-direction: column;
-    gap: 23px;
+    gap: 12px;
 
     div {
       display: flex;
       align-items: center;
-      gap: 12px;
+      gap: 4px;
+      min-height: 54px;
     }
   }
 
@@ -35,7 +36,7 @@
     text-align: left;
     /* H3 */
     font-family: 'Poppins';
-    font-size: 32px;
+    font-size: 28px;
     font-style: normal;
     font-weight: 400;
     line-height: 105%;
@@ -56,12 +57,14 @@
     font-style: normal;
     font-weight: 400;
     line-height: normal;
+    padding: 0 0 0 6px;
   }
 
   &__temp {
     color: #fff;
     text-align: right;
     font-feature-settings: 'ss04' on;
+    max-height: 54px;
 
     /* Main/Clear, Few clouds */
     text-shadow: 0px 4px 80px #1280bc;
