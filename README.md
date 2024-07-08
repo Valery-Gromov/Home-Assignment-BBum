@@ -3,6 +3,10 @@ Our weather application, built with React, TypeScript, and Redux, provides users
 
 Repository address: https://github.com/Valery-Gromov/Home-Assignment-BBum
 
+# Link to the demo:
+
+https://weather-forecast-beach-bum.netlify.app/
+
 # Key Features:
 1. Current Weather and Forecasts: View detailed weather information for the current day and the upcoming days.
 2. Save Favorite Cities: Users can save their favorite cities for quick access to their weather updates.
@@ -20,10 +24,6 @@ This project aims to provide an intuitive and visually appealing way for users t
 - Prettier (code formatting)
 - SCSS (styling)
 
-# Link to the demo:
-
-https://weather-forecast-beach-bum.netlify.app/
-
 # Instructions for running the project locally:
 
 **Step 1: Clone the Repository**
@@ -32,7 +32,7 @@ https://weather-forecast-beach-bum.netlify.app/
 - Use the `git clone` command to clone the repository:
 
 ```bash
-git clone git@github.com:Valery-Gromov/chatty-ai.git
+git clone https://github.com/Valery-Gromov/Home-Assignment-BBum.git
 ```
 
 **Step 2: Install Dependencies**
