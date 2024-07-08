@@ -1,0 +1,52 @@
+@import '../../styles/typography.scss';
+
+.search-input {
+  position: relative;
+  display: flex;
+  gap: 8px;
+  max-height: 40px;
+
+  &__btn {
+    @include Web-Title;
+    text-transform: none;
+    padding: 14px 16px;
+    gap: 8px;
+    color: #1b5175;
+  }
+
+  &__input {
+    @include Web-Title;
+    text-transform: none;
+    padding: 14px 16px;
+    width: 240px;
+    color: #1b5175;
+    cursor: auto;
+
+    &::placeholder {
+      color: #1b5175;
+    }
+  }
+
+  &__suggestions {
+    position: absolute;
+    width: 240px;
+    height: 150px;
+    top: 40px;
+    right: 0;
+    overflow-y: auto;
+    border-radius: 0 0 8px 8px;
+    background: rgba(255, 255, 255, 0.6);
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    gap: 20px;
+    padding: 16px 14px;
+    cursor: pointer;
+
+    &-title {
+      @include Web-Title;
+      text-transform: none;
+      color: #1b5175;
+    }
+  }
+}

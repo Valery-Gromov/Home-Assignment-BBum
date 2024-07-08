@@ -1,0 +1,161 @@
+@import './typography.scss';
+
+.weather-data-children {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 10px;
+  width: 100%;
+  height: 100%;
+
+  &__value {
+    color: #fff;
+    font-feature-settings: 'ss04' on;
+    /* Main/Clear, Few clouds */
+    text-shadow: 0px 4px 80px #1280bc;
+    /* H3 */
+    font-family: 'PP Telegraf';
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 105%; /* 33.6px */
+  }
+
+  &__description {
+    @include Web-Title;
+    color: #fff;
+    text-shadow: 0px 4px 80px #1280bc;
+  }
+
+  &__advice {
+    width: 100%;
+    color: #fff;
+    text-shadow: 0px 4px 80px #1280bc;
+    text-align: left;
+    /* Text */
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    max-height: 50px;
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    overflow-y: auto;
+  }
+
+  &__days-list {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  &__day {
+    width: 100%;
+    min-height: 28px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &-title {
+      color: #fff;
+      /* Text Bold */
+      font-family: Inter;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: normal;
+      width: 48px;
+      text-align: left;
+    }
+
+    &-description-container {
+      width: 200px;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      text-align: left;
+      gap: 8px;
+
+      img {
+        width: 28px;
+        height: 28px;
+      }
+    }
+
+    &-description {
+      color: #fff;
+      /* Text */
+      font-family: Inter;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+    }
+
+    &-temp-container {
+      width: 85px;
+      display: flex;
+      align-items: center;
+      gap: 27px;
+      justify-content: space-between;
+    }
+
+    &-temp {
+      color: #fff;
+      text-align: center;
+      /* Main/Broken clouds */
+      text-shadow: 0px 4px 80px rgba(0, 0, 0, 0.8);
+      /* Text Bold */
+      font-family: Inter;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: normal;
+    }
+  }
+
+  &__hours-list {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    overflow: auto;
+    gap: 40px;
+  }
+
+  &__hour {
+    min-height: 28px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    
+
+    &-description {
+      color: #fff;
+      text-align: center;
+      /* Main/Broken clouds */
+      text-shadow: 0px 4px 80px rgba(0, 0, 0, 0.8);
+      /* Text Bold */
+      font-family: Inter;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: normal;
+    }
+
+    &-icon {
+      width: 28px;
+      height: 28px;
+    }
+  }
+}

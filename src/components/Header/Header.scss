@@ -1,0 +1,30 @@
+@import '../../styles/typography.scss';
+
+.header {
+  position: relative;
+  z-index: 1500;
+  display: flex;
+  justify-content: space-between;
+  max-height: 40px;
+
+  &__btn {
+      padding: 6px;
+  }
+
+  &__location-container {
+    display: flex;
+    gap: 16px;
+
+    div {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    p {
+        @include Web-Title;
+        color: #FFF;
+        text-shadow: 0px 4px 80px #1280BC;
+    }
+  }
+}
