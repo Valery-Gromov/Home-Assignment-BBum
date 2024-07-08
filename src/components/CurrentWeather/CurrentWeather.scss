@@ -6,11 +6,12 @@
   margin: 16px 0 0 0;
 
   @media (max-width: 1205px) {
-    margin: 80px 60px 0 0;
+    margin: 80px 0 40px 0;
   }
 
   @media (max-width: 990px) {
     font-size: 20px;
+    flex-direction: column;
   }
 
   &__decription-container {

@@ -21,6 +21,10 @@
     width: 240px;
     color: #1b5175;
     cursor: auto;
+  
+    @media (max-width: 990px) {
+      width: 140px;
+    }
 
     &::placeholder {
       color: #1b5175;
@@ -42,6 +46,10 @@
     gap: 20px;
     padding: 16px 14px;
     cursor: pointer;
+
+    @media (max-width: 990px) {
+      width: 140px;
+    }
 
     &-title {
       @include Web-Title;
