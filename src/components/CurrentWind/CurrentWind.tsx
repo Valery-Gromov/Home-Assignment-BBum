@@ -8,28 +8,30 @@ const CurrentWind = () => {
 
   // The function handles the Wind's direction state
   useEffect(() => {
-    const degrees = weather.current.wind_deg;
+    if (weather) {
+      const degrees = weather.current.wind_deg;
 
-    if (degrees >= 0 && degrees < 22.5) {
-      setWindDirection('North (N)');
-    } else if (degrees >= 22.5 && degrees < 67.5) {
-      setWindDirection('Northeast (NE)');
-    } else if (degrees >= 67.5 && degrees < 112.5) {
-      setWindDirection('East (E)');
-    } else if (degrees >= 112.5 && degrees < 157.5) {
-      setWindDirection('Southeast (SE)');
-    } else if (degrees >= 157.5 && degrees < 202.5) {
-      setWindDirection('South (S)');
-    } else if (degrees >= 202.5 && degrees < 247.5) {
-      setWindDirection('Southwest (SW)');
-    } else if (degrees >= 247.5 && degrees < 292.5) {
-      setWindDirection('West (W)');
-    } else if (degrees >= 292.5 && degrees < 337.5) {
-      setWindDirection('Northwest (NW)');
-    } else if (degrees >= 337.5 && degrees <= 360) {
-      setWindDirection('North (N)');
-    } else {
-      console.log('Unknown direction');
+      if (degrees >= 0 && degrees < 22.5) {
+        setWindDirection('North (N)');
+      } else if (degrees >= 22.5 && degrees < 67.5) {
+        setWindDirection('Northeast (NE)');
+      } else if (degrees >= 67.5 && degrees < 112.5) {
+        setWindDirection('East (E)');
+      } else if (degrees >= 112.5 && degrees < 157.5) {
+        setWindDirection('Southeast (SE)');
+      } else if (degrees >= 157.5 && degrees < 202.5) {
+        setWindDirection('South (S)');
+      } else if (degrees >= 202.5 && degrees < 247.5) {
+        setWindDirection('Southwest (SW)');
+      } else if (degrees >= 247.5 && degrees < 292.5) {
+        setWindDirection('West (W)');
+      } else if (degrees >= 292.5 && degrees < 337.5) {
+        setWindDirection('Northwest (NW)');
+      } else if (degrees >= 337.5 && degrees <= 360) {
+        setWindDirection('North (N)');
+      } else {
+        console.log('Unknown direction');
+      }
     }
   }, [weather]);
 

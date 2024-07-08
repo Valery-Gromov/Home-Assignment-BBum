@@ -22,22 +22,24 @@ const App: React.FC = () => {
 
   // The function handles the state of the background
   useEffect(() => {
-    const currentId = weather.current.weather[0].id;
-    const currentCondition = weatherCondions.find((item) => {
-      return item.id === currentId;
-    });
+    if (weather) {
+      const currentId = weather.current.weather[0].id;
+      const currentCondition = weatherCondions.find((item) => {
+        return item.id === currentId;
+      });
 
-    const currentTimeDate = new Date(weather.current.dt * 1000);
-    const sunriseTimeDate = new Date(weather.daily[0].sunrise * 1000);
-    const sunsetTimeDate = new Date(weather.daily[0].sunset * 1000);
+      const currentTimeDate = new Date(weather.current.dt * 1000);
+      const sunriseTimeDate = new Date(weather.daily[0].sunrise * 1000);
+      const sunsetTimeDate = new Date(weather.daily[0].sunset * 1000);
 
-    if (currentTimeDate >= sunriseTimeDate && currentTimeDate < sunsetTimeDate) {
-      currentCondition && setBackground(currentCondition.valueDay);
-    } else {
-      currentCondition && setBackground(currentCondition.valueNight);
+      if (currentTimeDate >= sunriseTimeDate && currentTimeDate < sunsetTimeDate) {
+        currentCondition && setBackground(currentCondition.valueDay);
+      } else {
+        currentCondition && setBackground(currentCondition.valueNight);
+      }
+
+      console.log(currentCondition);
     }
-
-    console.log(currentCondition);
   }, [weather]);
 
   // The function handles the initial state
