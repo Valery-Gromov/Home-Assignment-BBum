@@ -4,6 +4,15 @@
   height: 100%;
   grid-template-columns: repeat(6, 1fr);
   grid-template-rows: repeat(3, 184px);
-  gap: 20px; 
-  box-sizing: border-box; 
+  gap: 20px;
+  box-sizing: border-box;
+
+  @media (max-width: 1205px) {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 184px);
+  }
+
+  @media (max-width: 990px) {
+    grid-template-columns: 1fr 1fr;
+  }
 }

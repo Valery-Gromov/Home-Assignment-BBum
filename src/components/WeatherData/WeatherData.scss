@@ -18,6 +18,10 @@
   &_1x4 {
     grid-column: span 4;
     grid-row: span 1;
+
+    @media (max-width: 990px) {
+      grid-column: span 2;
+    }
   }
 
   &_1x2 {

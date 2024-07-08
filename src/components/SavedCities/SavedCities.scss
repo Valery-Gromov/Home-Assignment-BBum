@@ -9,13 +9,26 @@
   z-index: 1000;
   background: rgba(18, 128, 188, 0.6);
   backdrop-filter: blur(27px);
-  padding: 120px 120px;
+  padding: 120px;
+
+  @media (max-width: 1205px) {
+    padding: 120px 40px;
+  }
 
   &__list {
     width: 100%;
+    
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(4, 1fr);
     gap: 20px;
+
+    @media (max-width: 1205px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  
+    @media (max-width: 990px) {
+      grid-template-columns: 1fr;
+    }
   }
 }

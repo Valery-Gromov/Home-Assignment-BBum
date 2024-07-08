@@ -14,6 +14,15 @@
   &__location-container {
     display: flex;
     gap: 16px;
+    flex-wrap: wrap;
+
+    @media (max-width: 1205px) {
+      text-align: left;
+    }
+  
+    @media (max-width: 990px) {
+      font-size: 20px;
+    }
 
     div {
       display: flex;
