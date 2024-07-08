@@ -9,6 +9,7 @@ const HourlyWeather = () => {
   const [nextHours, setNextHours] = useState<string[] | []>([]);
   const { weather } = useSelector((state: RootState) => state.weatherItem);
 
+  // The function sets the next hours
   useEffect(() => {
     const hour = getNextHours();
     hour[0] = 'Now';

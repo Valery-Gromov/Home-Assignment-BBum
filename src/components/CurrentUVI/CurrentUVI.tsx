@@ -10,6 +10,7 @@ const CurrentUVI = () => {
   const { weather } = useSelector((state: RootState) => state.weatherItem);
   const [uviData, setUviData] = useState<uviDataTypes>(null);
 
+  // The function handles the UVI's state
   useEffect(() => {
     const uvi = Number(weather.current.uvi.toFixed(0));
 

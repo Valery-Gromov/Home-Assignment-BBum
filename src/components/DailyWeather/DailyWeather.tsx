@@ -9,6 +9,7 @@ const DailyWeather = () => {
   const { weather } = useSelector((state: RootState) => state.weatherItem);
   const [nextSevenDays, setNextSevenDays] = useState<{ date: string; day: string }[] | []>([]);
 
+  // The function sets the next seven days
   useEffect(() => {
     const sevenDays = getNextSevenDays();
     sevenDays[0].day = 'Today';

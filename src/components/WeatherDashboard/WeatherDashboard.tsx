@@ -16,7 +16,6 @@ import CurrentAllerts from '../CurrentAllerts/CurrentAllerts';
 
 const WeatherDashboard = () => {
   const { weather } = useSelector((state: RootState) => state.weatherItem);
-  
 
   return (
     <section className="weather-dashboard">

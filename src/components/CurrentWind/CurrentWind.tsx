@@ -6,6 +6,7 @@ const CurrentWind = () => {
   const { weather } = useSelector((state: RootState) => state.weatherItem);
   const [windDirection, setWindDirection] = useState('');
 
+  // The function handles the Wind's direction state
   useEffect(() => {
     const degrees = weather.current.wind_deg;
 
@@ -30,8 +31,7 @@ const CurrentWind = () => {
     } else {
       console.log('Unknown direction');
     }
-
-  }, [weather])
+  }, [weather]);
 
   return (
     <div className="weather-data-children ">

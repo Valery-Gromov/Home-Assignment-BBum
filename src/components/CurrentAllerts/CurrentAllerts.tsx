@@ -7,6 +7,8 @@ const CurrentAlerts: React.FC = () => {
   const { weather } = useSelector((state: RootState) => state.weatherItem);
   const [lastAlert, setLastAlert] = useState<alerts | null>(null);
 
+
+ // The function handles the alert's state
   useEffect(() => {
     if (!weather) {
       return;
