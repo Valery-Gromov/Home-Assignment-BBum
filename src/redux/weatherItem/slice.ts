@@ -2,10 +2,13 @@ import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 import { getCurrentDataFromLS } from '../../utils/getDataFromLS';
 import { weatherItemState, location, weatherData } from './types';
 import { getWeatherByCoord, initializeWeather } from './asyncActions';
+import { locationTemplate, weatherTemplate } from '../../constants/weatherTemplate';
+
+const initialStateData = getCurrentDataFromLS();
 
 const initialState: weatherItemState = {
-  location: getCurrentDataFromLS().currentLocationData || null,
-  weather: getCurrentDataFromLS().weatherData || null,
+  location: initialStateData.currentLocationData || null,
+  weather: initialStateData.weatherData || null,
   isSaved: false,
 };
 

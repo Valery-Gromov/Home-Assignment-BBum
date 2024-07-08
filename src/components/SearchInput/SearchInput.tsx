@@ -4,7 +4,7 @@ import './SearchInput.scss';
 import plusIcon from '../../assets/images/plus-icon.svg';
 
 import { useDispatch, useSelector } from 'react-redux';
-import { getSuggestions } from '../../constants/api';
+import { getSuggestions } from '../../utils/api';
 import { AppDispatch, RootState } from '../../redux/store';
 import { addCity } from '../../redux/savedCitiesList/slice';
 import { setQuery, setSuggestions } from '../../redux/search/slice';

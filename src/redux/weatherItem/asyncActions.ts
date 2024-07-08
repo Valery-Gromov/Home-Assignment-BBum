@@ -1,5 +1,5 @@
 import { createAsyncThunk } from '@reduxjs/toolkit';
-import { getGeoData, getWeatherData } from '../../constants/api';
+import { getGeoData, getWeatherData } from '../../utils/api';
 import { getInitialWeather } from '../../utils/getInitialWeather';
 import { location, weatherData, weatherItemState } from './types';
 

@@ -1,4 +1,4 @@
-import { getGeoData, getWeatherData } from '../constants/api';
+import { getGeoData, getWeatherData } from './api';
 import { location, weatherData } from '../redux/weatherItem/types';
 
 export const getInitialWeather = async () => {

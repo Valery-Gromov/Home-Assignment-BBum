@@ -7,7 +7,7 @@ import WeatherDashboard from '../WeatherDashboard/WeatherDashboard';
 import Header from '../Header/Header';
 import CurrentWeather from '../CurrentWeather/CurrentWeather';
 import { getWeatherByCoord, initializeWeather } from '../../redux/weatherItem/asyncActions';
-import { getWeatherData } from '../../constants/api';
+import { getWeatherData } from '../../utils/api';
 import { resetIsSaved, setIsSaved } from '../../redux/weatherItem/slice';
 import { updateCitiesList } from '../../redux/savedCitiesList/slice';
 
@@ -39,7 +39,12 @@ const App: React.FC = () => {
   }, [location, weather, citiesList]);
 
   useEffect(() => {
-    const currentCity = citiesList.find((item) => item.name === location.name);
+    let currentCity;
+    
+    if (location) {
+      currentCity = citiesList.find((item) => item.name === location.name);
+    }
+
     if (!currentCity) {
       dispatch(resetIsSaved());
     } else {
