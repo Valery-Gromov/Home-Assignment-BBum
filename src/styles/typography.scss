@@ -5,4 +5,8 @@
   font-weight: 600;
   line-height: normal;
   text-transform: uppercase;
+
+  @media (max-width: 1205px) {
+    font-size: 16px;
+  }
 }
