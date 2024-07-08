@@ -3,7 +3,7 @@ import { useSelector } from 'react-redux';
 import { RootState } from '../../redux/store';
 
 const CurrentWeather = () => {
-  const { location, weather } = useSelector((state: RootState) => state.weatherItem);
+  const { weather } = useSelector((state: RootState) => state.weatherItem);
 
   return (
     <section className="current-weather">

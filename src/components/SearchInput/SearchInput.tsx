@@ -26,7 +26,7 @@ const SearchInput = () => {
     } else {
       dispatch(setSuggestions([]));
     }
-  }, [query]);
+  }, [query, dispatch, fetchSuggestions]);
 
   const handleSearch = (data: string) => {
     dispatch(resetIsSaved());

@@ -24,7 +24,7 @@ const DailyWeather = () => {
               <h4 className="weather-data-children__day-title">{nextSevenDays[i].day}</h4>
             )}
             <div className="weather-data-children__day-description-container">
-              <img src={`https://openweathermap.org/img/wn/${day.weather[0].icon}@2x.png`} />
+              <img src={`https://openweathermap.org/img/wn/${day.weather[0].icon}@2x.png`} alt={day.weather[0].description} />
               <p className="weather-data-children__day-description">{day.weather[0].description}</p>
             </div>
             <div className="weather-data-children__day-temp-container">
