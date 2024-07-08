@@ -14,9 +14,8 @@ const SavedCityItem = (props: location) => {
   const { location, weather } = useSelector((state: RootState) => state.weatherItem);
   const { citiesList } = useSelector((state: RootState) => state.savedCitiesList);
 
-  console.log(props);
-  
-
+  // By clicking on the button, information about the city is requested from the server
+  // and a new city is added to the list
   const handleButtonClick = async () => {
     dispatch(setWeather(await getWeatherData(props)));
     const newLocation: location = {
@@ -29,6 +28,7 @@ const SavedCityItem = (props: location) => {
     dispatch(setSavedCitiesOpen());
   };
 
+  // Sets the current city and weather values
   useEffect(() => {
     const getCurrentWeatherData = async () => {
       const currentWeatherData = await getWeatherData(props);

@@ -4,6 +4,8 @@ import scaleImgHigh from '../assets/images/uvi__scale_high.svg';
 import scaleImgVeryHigh from '../assets/images/uvi__scale_very-high.svg';
 import scaleImgExtreme from '../assets/images/uvi__scale_extreme.svg';
 
+// Possible states of the CurrentUVI component
+
 export type uviDataTypes = {
   uviValue: string;
   uviImage: string;

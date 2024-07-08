@@ -14,7 +14,7 @@
 body {
   margin: 0;
   font-family: "Inter", "Poppins", sans-serif;
-  background: url('./assets/images/background_few-clouds.png') lightgray 50% / cover no-repeat;
+  
   width: 100vw;
 }
 

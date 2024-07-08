@@ -3,6 +3,7 @@ import { getGeoData, getWeatherData } from '../../utils/api';
 import { getInitialWeather } from '../../utils/getInitialWeather';
 import { location, weatherData, weatherItemState } from './types';
 
+// Returns the weather and location when LS is empty
 export const initializeWeather = createAsyncThunk<weatherItemState>(
   'weatherItem/initializeWeather',
   async () => {
@@ -12,6 +13,7 @@ export const initializeWeather = createAsyncThunk<weatherItemState>(
   },
 );
 
+// Returns the weather and location by name
 export const getWeatherByCoord = createAsyncThunk<
   { location: location; weather: weatherData; },
   string

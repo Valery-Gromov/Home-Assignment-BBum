@@ -1,6 +1,12 @@
 .app {
-  text-align: center;
-  padding: 40px 120px;
-  overflow-x: hidden;
+  background: url('../../assets/images/background_few-clouds.png') lightgray 50% / cover no-repeat;
   width: 100%;
+  background-attachment: fixed;
+
+  &__wrapper {
+    text-align: center;
+    padding: 40px 120px;
+    overflow-x: hidden;
+    width: 100%;
+  }
 }

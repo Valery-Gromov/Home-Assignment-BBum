@@ -1,5 +1,7 @@
 import { location, weatherData } from "../redux/weatherItem/types";
 
+// Weather and location templates
+
 export const weatherTemplate: weatherData = {
   lat: 0,
   lon: 0,

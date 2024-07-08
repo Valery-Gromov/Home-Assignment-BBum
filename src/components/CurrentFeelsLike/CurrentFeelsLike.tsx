@@ -6,6 +6,7 @@ const CurrentFeelsLike = () => {
   const { weather } = useSelector((state: RootState) => state.weatherItem);
   const [advice, setAdvice] = useState('');
 
+  // The function handles the feels like state
   useEffect(() => {
     const tempFL = Number(weather.current.feels_like).toFixed(0);
     const temp = Number(weather.current.temp).toFixed(0);
