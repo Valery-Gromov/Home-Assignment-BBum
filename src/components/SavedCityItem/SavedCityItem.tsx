@@ -33,7 +33,7 @@ const SavedCityItem = (props: location) => {
 
   useEffect(() => {
     getCurrentWeatherData();
-  }, [location, weather, citiesList]);
+  }, [location, weather, citiesList, getCurrentWeatherData]);
 
   return (
     <>

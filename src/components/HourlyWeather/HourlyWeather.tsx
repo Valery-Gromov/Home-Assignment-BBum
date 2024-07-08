@@ -26,6 +26,7 @@ const HourlyWeather = () => {
             <img
               className="weather-data-children__hour-icon"
               src={`https://openweathermap.org/img/wn/${hour.weather[0].icon}@2x.png`}
+              alt={hour.weather[0].description}
             />
             <p className="weather-data-children__hour-description">
               {typeof hour.temp === 'number' && hour.temp.toFixed(0)}°

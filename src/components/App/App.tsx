@@ -27,7 +27,7 @@ const App: React.FC = () => {
     if (!location || !weather || !citiesList) {
       dispatch(initializeWeather());
     }
-  }, [location, weather, citiesList]);
+  }, [location, weather, citiesList, dispatch]);
 
   useEffect(() => {
     if (isMounted.current) {
@@ -51,7 +51,7 @@ const App: React.FC = () => {
     } else {
       dispatch(setIsSaved());
     }
-  }, [location, weather]);
+  }, [location, weather, citiesList]);
 
   useEffect(() => {
     if (!location || !weather) {
@@ -66,7 +66,7 @@ const App: React.FC = () => {
     }, 10 * 10 * 1000);
 
     return () => clearInterval(intervalId);
-  }, [dispatch, location, weather]);
+  }, [dispatch, location, weather, updateCitiesList]);
 
   return (
     <div className="app">

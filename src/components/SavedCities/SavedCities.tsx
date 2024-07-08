@@ -1,4 +1,3 @@
-import { useEffect, useRef } from 'react';
 import './SavedCities.scss';
 import { useSelector } from 'react-redux';
 import { location } from '../../redux/weatherItem/types';
