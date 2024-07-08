@@ -16,7 +16,7 @@ export type alerts = {
 
 export type weatherConditios = {
   id: number;
-  main: number;
+  main: string;
   description: string;
   icon: string;
 };

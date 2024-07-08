@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import './SavedCityItem.scss';
 import { useDispatch, useSelector } from 'react-redux';
-import { getWeatherData } from '../../constants/api';
+import { getWeatherData } from '../../utils/api';
 import { setLocation, setWeather } from '../../redux/weatherItem/slice';
 import { location, weatherData } from '../../redux/weatherItem/types';
 import { convertUnixTimestamp } from '../../utils/convertUnixTimestamp';
@@ -13,6 +13,9 @@ const SavedCityItem = (props: location) => {
   const [currentWeather, setCurrentWeather] = useState<weatherData | null>(null);
   const { location, weather } = useSelector((state: RootState) => state.weatherItem);
   const { citiesList } = useSelector((state: RootState) => state.savedCitiesList);
+
+  console.log(props);
+  
 
   const handleButtonClick = async () => {
     dispatch(setWeather(await getWeatherData(props)));
