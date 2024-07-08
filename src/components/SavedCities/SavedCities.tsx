@@ -6,18 +6,7 @@ import { RootState } from '../../redux/store';
 import SavedCityItem from '../SavedCityItem/SavedCityItem';
 
 const SavedCities = () => {
-  const isMounted = useRef(false);
   const { citiesList } = useSelector((state: RootState) => state.savedCitiesList);
-
-  useEffect(() => {
-    if (isMounted.current) {
-      const json = JSON.stringify(citiesList);
-      console.log('json', json);
-      localStorage.setItem('savedCitiesList', json);
-    }
-
-    isMounted.current = true;
-  }, [citiesList]);
 
   return (
     <section className="saved-cities">

@@ -1,4 +1,3 @@
-import { useEffect, useRef } from 'react';
 import './WeatherDashboard.scss';
 import { useSelector } from 'react-redux';
 import { RootState } from '../../redux/store';
@@ -16,20 +15,8 @@ import HourlyWeather from '../HourlyWeather/HourlyWeather';
 import CurrentAllerts from '../CurrentAllerts/CurrentAllerts';
 
 const WeatherDashboard = () => {
-  const { location, weather } = useSelector((state: RootState) => state.weatherItem);
-  const isMounted = useRef(false);
-
-  useEffect(() => {
-    if (isMounted.current) {
-      const currentWeatherJson = JSON.stringify(weather);
-      const currentLocationJson = JSON.stringify(location);
-
-      localStorage.setItem('currentWeather', currentWeatherJson);
-      localStorage.setItem('currentLocation', currentLocationJson);
-    }
-
-    isMounted.current = true;
-  }, [location, weather]);
+  const { weather } = useSelector((state: RootState) => state.weatherItem);
+  
 
   return (
     <section className="weather-dashboard">

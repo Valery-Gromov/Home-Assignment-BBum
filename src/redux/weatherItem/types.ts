@@ -64,4 +64,5 @@ export type weatherData = {
 export interface weatherItemState {
   location: location;
   weather: weatherData;
+  isSaved: boolean;
 }

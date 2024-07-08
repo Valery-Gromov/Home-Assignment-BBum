@@ -2,10 +2,18 @@ import '../../styles/weather-data-children.scss';
 import { useSelector } from 'react-redux';
 import { RootState } from '../../redux/store';
 import { weather } from '../../redux/weatherItem/types';
-import { nextSevenDays } from '../../utils/getNextDays';
+import { getNextSevenDays } from '../../utils/getNextDays';
+import { useEffect, useState } from 'react';
 
 const DailyWeather = () => {
   const { weather } = useSelector((state: RootState) => state.weatherItem);
+  const [nextSevenDays, setNextSevenDays] = useState<{ date: string; day: string }[] | []>([]);
+
+  useEffect(() => {
+    const sevenDays = getNextSevenDays();
+    sevenDays[0].day = 'Today';
+    setNextSevenDays(sevenDays);
+  }, [weather]);
 
   return (
     <div className="weather-data-children ">

@@ -21,8 +21,3 @@ export const getNextSevenDays = (): { date: string; day: string }[] => {
 
   return result;
 };
-
-const sevenDays = getNextSevenDays();
-sevenDays[0].day = 'Today'
-
-export const nextSevenDays = sevenDays;

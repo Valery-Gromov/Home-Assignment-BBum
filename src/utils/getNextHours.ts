@@ -1,4 +1,4 @@
-const getNextHours = (): string[] => {
+export const getNextHours = (): string[] => {
   const result: string[] = [];
   const currentDate = new Date();
 
@@ -10,7 +10,3 @@ const getNextHours = (): string[] => {
 
   return result;
 };
-const hous = getNextHours();
-hous[0] = 'Now';
-
-export const nextHours = hous;

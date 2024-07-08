@@ -41,6 +41,7 @@
     text-align: left;
     gap: 20px;
     padding: 16px 14px;
+    cursor: pointer;
 
     &-title {
       @include Web-Title;

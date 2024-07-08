@@ -5,7 +5,7 @@ import { savedCitiesListState } from './types';
 import { location } from '../weatherItem/types';
 
 const initialState: savedCitiesListState = {
-  citiesList: getCitiesListFromLS(),
+  citiesList: getCitiesListFromLS() || null,
   savedCitiesOpen: false,
 };
 
@@ -19,7 +19,7 @@ export const savedCitiesListSlice = createSlice({
     },
     setSavedCitiesOpen: (state) => {
       state.savedCitiesOpen = !state.savedCitiesOpen;
-    }
+    },
   },
 });
 

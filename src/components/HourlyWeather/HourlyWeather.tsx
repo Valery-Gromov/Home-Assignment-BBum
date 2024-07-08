@@ -2,12 +2,18 @@ import '../../styles/weather-data-children.scss';
 import { useSelector } from 'react-redux';
 import { RootState } from '../../redux/store';
 import { weather } from '../../redux/weatherItem/types';
-import { nextHours } from '../../utils/getNextHours';
+import { getNextHours } from '../../utils/getNextHours';
+import { useEffect, useState } from 'react';
 
 const HourlyWeather = () => {
+  const [nextHours, setNextHours] = useState<string[] | []>([]);
   const { weather } = useSelector((state: RootState) => state.weatherItem);
 
-  console.log(nextHours);
+  useEffect(() => {
+    const hour = getNextHours();
+    hour[0] = 'Now';
+    setNextHours(hour);
+  }, [weather]);
 
   return (
     <div className="weather-data-children ">
