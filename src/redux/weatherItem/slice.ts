@@ -2,7 +2,6 @@ import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 import { getCurrentDataFromLS } from '../../utils/getDataFromLS';
 import { weatherItemState, location, weatherData } from './types';
 import { getWeatherByCoord, initializeWeather } from './asyncActions';
-import { locationTemplate, weatherTemplate } from '../../constants/weatherTemplate';
 
 const initialStateData = getCurrentDataFromLS();
 
