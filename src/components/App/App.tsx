@@ -9,6 +9,7 @@ import CurrentWeather from '../CurrentWeather/CurrentWeather';
 import { getWeatherByCoord, initializeWeather } from '../../redux/weatherItem/asyncActions';
 import { getWeatherData } from '../../constants/api';
 import { resetIsSaved, setIsSaved } from '../../redux/weatherItem/slice';
+import { updateCitiesList } from '../../redux/savedCitiesList/slice';
 
 const App: React.FC = () => {
   const dispatch: AppDispatch = useDispatch();
@@ -16,12 +17,6 @@ const App: React.FC = () => {
   const { savedCitiesOpen, citiesList } = useSelector((state: RootState) => state.savedCitiesList);
 
   const isMounted = useRef(false);
-
-  const updateCitiesList = () => {
-    citiesList.forEach(async (item) => {
-      await getWeatherData(item);
-    });
-  };
 
   useEffect(() => {
     if (!location || !weather || !citiesList) {
@@ -45,28 +40,38 @@ const App: React.FC = () => {
 
   useEffect(() => {
     const currentCity = citiesList.find((item) => item.name === location.name);
-
     if (!currentCity) {
       dispatch(resetIsSaved());
     } else {
       dispatch(setIsSaved());
     }
-  }, [location, weather, citiesList]);
+  }, [location, weather, citiesList, dispatch]);
 
   useEffect(() => {
-    if (!location || !weather) {
-      dispatch(initializeWeather());
-    }
-
     const intervalId = setInterval(() => {
       if (location && location.name) {
         dispatch(getWeatherByCoord(location.name));
-        console.log(updateCitiesList());
+
+        const updateCitiesListas = async () => {
+          const newArray = await Promise.all(
+            citiesList.map(async (item) => {
+              const weatherData = await getWeatherData(item);
+              return {
+                ...item,
+                weatherData,
+              };
+            }),
+          );
+
+          dispatch(updateCitiesList(newArray));
+        };
+
+        updateCitiesListas();
       }
     }, 10 * 10 * 1000);
 
     return () => clearInterval(intervalId);
-  }, [dispatch, location, weather, updateCitiesList]);
+  }, [dispatch, location, weather, citiesList]);
 
   return (
     <div className="app">
