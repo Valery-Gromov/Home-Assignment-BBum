@@ -16,17 +16,17 @@ const SearchInput = () => {
   const { location, isSaved } = useSelector((state: RootState) => state.weatherItem);
   const { suggestions, query } = useSelector((state: RootState) => state.search);
 
-  const fetchSuggestions = async (query: string) => {
-    dispatch(setSuggestions(await getSuggestions(query)));
-  };
-  
   useEffect(() => {
+    const fetchSuggestions = async (query: string) => {
+      dispatch(setSuggestions(await getSuggestions(query)));
+    };
+
     if (query.length > 1) {
       fetchSuggestions(query);
     } else {
       dispatch(setSuggestions([]));
     }
-  }, [query, dispatch, fetchSuggestions]);
+  }, [query, dispatch]);
 
   const handleSearch = (data: string) => {
     dispatch(resetIsSaved());

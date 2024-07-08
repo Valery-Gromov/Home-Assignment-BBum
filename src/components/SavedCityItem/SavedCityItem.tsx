@@ -26,14 +26,13 @@ const SavedCityItem = (props: location) => {
     dispatch(setSavedCitiesOpen());
   };
 
-  const getCurrentWeatherData = async () => {
-    const currentWeatherData = await getWeatherData(props);
-    setCurrentWeather(currentWeatherData);
-  };
-
   useEffect(() => {
+    const getCurrentWeatherData = async () => {
+      const currentWeatherData = await getWeatherData(props);
+      setCurrentWeather(currentWeatherData);
+    };
     getCurrentWeatherData();
-  }, [location, weather, citiesList, getCurrentWeatherData]);
+  }, [location, weather, citiesList, props]);
 
   return (
     <>

@@ -20,8 +20,11 @@ export const savedCitiesListSlice = createSlice({
     setSavedCitiesOpen: (state) => {
       state.savedCitiesOpen = !state.savedCitiesOpen;
     },
+    updateCitiesList: (state, action: PayloadAction<location[]>) => {
+      state.citiesList = action.payload;
+    },
   },
 });
 
-export const { addCity, setSavedCitiesOpen } = savedCitiesListSlice.actions;
+export const { addCity, setSavedCitiesOpen, updateCitiesList } = savedCitiesListSlice.actions;
 export default savedCitiesListSlice.reducer;
