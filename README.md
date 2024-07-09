@@ -48,15 +48,13 @@ https://weather-forecast-beach-bum.netlify.app/
 
 4. **Additional Weather Data:**
 
-   - Display more detailed weather information such as humidity, pressure, and visibility.
-   - Integrate air quality index (AQI) data to provide users with air quality updates.
+   - Display more detailed weather information.
    - Add weather maps, including radar and satellite imagery, for better visualization.
 
 5. **User Personalization:**
 
    - Allow users to customize the app's appearance, including themes and color schemes.
    - Enable users to set up weather alerts and notifications for specific conditions.
-   - Add a feature to save multiple locations and easily switch between them.
 
 6. **Accessibility Improvements:**
     - Ensure the app is fully accessible to users with disabilities by following WCAG guidelines.
