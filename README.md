@@ -1,6 +1,6 @@
 # Home Assignment Weather Forecast
 
-Our weather application, built with React, TypeScript, and Redux, provides users with real-time weather information and forecasts for various cities. The application fetches data from a weather API and displays the current weather conditions, including temperature, humidity, wind speed, and weather descriptions
+My weather application, built with React, TypeScript, and Redux, provides users with real-time weather information and forecasts for various cities. The application fetches data from a weather API and displays the current weather conditions, including temperature, humidity, wind speed, and weather descriptions
 
 Repository address: https://github.com/Valery-Gromov/Home-Assignment-BBum
 
